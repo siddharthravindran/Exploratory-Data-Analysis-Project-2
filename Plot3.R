@@ -1,0 +1,6 @@
+> BaltimoreEmissionsPerYearByType = aggregate(Emissions ~ year + type, NEI, sum)
+> png("plot3.png")
+> g <- ggplot(BaltimoreEmissionsPerYearByType, aes(year, Emissions, color = type))
+> g <- g + geom_line() + xlab("Year") + ylab ("Emissions") + ggtitle ('Total Emissions in Baltimore from 1999 to 2008')
+> print(g)
+> dev.off()
